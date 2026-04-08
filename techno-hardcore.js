@@ -15,8 +15,8 @@ stack(
     .distort(0.7)
     .shape(0.4),
 
-  // ═══ CLAP — ogni due battute (beat 3 delle battute dispari) ═══
-  s("~ ~ <cp ~> ~")
+  // ═══ CLAP ═══
+  s("cp cp")
     .gain(1.2)
     .room(0.12)
     .distort(0.35),
@@ -50,6 +50,18 @@ stack(
     .lpf(sine.range(250, 3500).slow(8))
     .lpq(22)
     .room(0.05),
+
+  // ═══ LEAD — stile italo dance (frase di 4 battute in Do minore) ═══
+  note("<[c5 ~ eb5 ~ g4 eb5 ~ ~] [c5 ~ bb4 ~ g4 ~ f4 ~] [g4 ~ eb5 ~ g4 eb5 c5 ~] [bb4 ~ g4 ~ f4 g4 eb4 ~]>")
+    .s("sawtooth")
+    .gain(0.75)
+    .lpf(5000)
+    .lpq(3)
+    .detune(8)
+    .room(0.45)
+    .delay(0.4)
+    .delaytime(0.1875)
+    .pan(0.55),
 
   // ═══ DARK INDUSTRIAL STAB ═══
   // Detuned square chords, hit every 2 bars
