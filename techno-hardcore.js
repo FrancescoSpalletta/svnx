@@ -32,9 +32,8 @@ stack(
     .gain(0.8)
     .room(0.15),
 
-  // ═══ DISTORTED KICK BASS (sub) ═══
-  // Follows kick with heavy saturation
-  note("<c1 c1 c1 [c1 g0]>*4")
+  // ═══ DISTORTED KICK BASS (sub) — in levare ═══
+  note("~ c1 ~ c1 ~ c1 ~ c1")
     .s("sawtooth")
     .gain(1.3)
     .distort(0.97)
@@ -42,9 +41,9 @@ stack(
     .lpf(400)
     .lpq(8),
 
-  // ═══ ACID BASSLINE ═══
+  // ═══ ACID BASSLINE — in levare ═══
   // 303-style: filter sweeps up over 8 bars then resets
-  note("c2 ~ [eb2 ~] ~ c2 ~ [bb1 c2] ~")
+  note("~ c2 ~ [eb2 ~] ~ c2 ~ [bb1 c2]")
     .s("sawtooth")
     .gain(0.95)
     .distort(0.65)
