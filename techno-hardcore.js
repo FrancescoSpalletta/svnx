@@ -9,28 +9,27 @@ setcps(175 / 60 / 4)
 
 stack(
 
-  // ═══ KICK ═══
-  // Distorted four-on-the-floor; extra kick on beat 4e
-  s("bd:5*4, ~ ~ ~ [bd:5 ~]")
+  // ═══ KICK — 4/4 puro ═══
+  s("bd:5*4")
     .gain(1.5)
     .distort(0.7)
     .shape(0.4),
 
-  // ═══ SNARE ═══
-  s("~ sd:3 ~ [sd:3 sd:3]")
+  // ═══ CLAP — ogni due battute (beat 3 delle battute dispari) ═══
+  s("~ ~ <cp ~> ~")
     .gain(1.2)
-    .room(0.08)
-    .distort(0.4),
+    .room(0.12)
+    .distort(0.35),
 
-  // ═══ CLOSED HI-HAT ═══
-  s("hh*16")
-    .gain("0.7 0.3 0.6 0.4  0.8 0.3 0.6 0.4  0.7 0.3 0.6 0.4  0.8 0.3 0.9 0.5")
+  // ═══ HI-HAT — in levare (ottavi in controtempo) ═══
+  s("~ hh ~ hh ~ hh ~ hh")
+    .gain(0.75)
     .pan(sine.range(0.3, 0.7))
     .hpf(8000),
 
-  // ═══ OPEN HI-HAT ═══
-  s("~ ~ oh ~  ~ ~ [oh ~] ~")
-    .gain(0.75)
+  // ═══ OPEN HI-HAT — accento ogni due battute sul levare di 4 ═══
+  s("~ ~ ~ ~  ~ ~ ~ <oh ~>")
+    .gain(0.8)
     .room(0.15),
 
   // ═══ DISTORTED KICK BASS (sub) ═══
